@@ -1,0 +1,27 @@
+{
+  "Nails": {
+    "category": "Beauty",
+    "overview": "overview nails",
+    "services": [
+      {
+        "brand": "Jessica",
+        "title": "Manicures",
+        "overview": "overview Manicures",
+        "items": [
+          {
+            "title": "Jessica Manicure",
+            "duration": "30 minutes",
+            "price": "",
+            "description": ""
+          },
+          {
+            "title": "GEL Manicure",
+            "duration": "30 minutes",
+            "price": "",
+            "description": "GELeration manicures last up to 3-4 weeks, with long lasting, high gloss gel set under a UV lamp."
+          }
+        ]
+      }
+    ]
+  }
+}
