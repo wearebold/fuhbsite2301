@@ -2,13 +2,13 @@
 <template>
     <div class="hero__bg">
         <section class="hero">
-        <div class="hero-content">
+        <!-- <div class="hero-content">
             <h1 class="hero-title">{{ title }}</h1>
             <p class="hero-description">{{ description }}</p>
             <div class="hero-button">
             <button class="cta-button">{{ buttonLabel }}</button>
             </div>
-        </div>
+        </div> -->
         <div class="hero-image">
             <NuxtImg
             @load="animateHeroImage"

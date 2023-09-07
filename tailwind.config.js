@@ -39,7 +39,8 @@
                 'xs': 'clamp(0.79rem, calc(0.79rem + 0.02vw), 0.80rem)', // -2
                 'xxs': 'clamp(0.64rem, calc(0.72rem + -0.11vw), 0.70rem)', // -3
                 'caps': 'clamp(0.5rem, 0.464rem + 0.18vw, 0.625rem)',
-                'nav-header': 'clamp(1.5rem, 0.786rem + 3.57vw, 4rem)', // 1                
+                'nav-header': 'clamp(1.5rem, 0.786rem + 3.57vw, 4rem)', // 1  
+                'services': 'clamp(1.25rem, 0.25rem + 5vw, 4rem)'              
             },
             letterSpacing: {
                 widest: '.25em',
