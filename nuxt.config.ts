@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   ssr: true,
   pages: true,
   nitro: {
+    static: true,
     preset: 'netlify', 
     prerender: {
       crawlLinks: true
