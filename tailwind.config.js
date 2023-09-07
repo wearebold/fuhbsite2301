@@ -37,7 +37,12 @@
                 'base': 'clamp(0.75rem, 0.663rem + 0.43vw, 1rem);', // 0
                 'sm': 'clamp(0.89rem, calc(0.85rem + 0.19vw), 1.00rem)', // -1
                 'xs': 'clamp(0.79rem, calc(0.79rem + 0.02vw), 0.80rem)', // -2
-                'xxs': 'clamp(0.64rem, calc(0.72rem + -0.11vw), 0.70rem)' // -3
+                'xxs': 'clamp(0.64rem, calc(0.72rem + -0.11vw), 0.70rem)', // -3
+                'caps': 'clamp(0.5rem, 0.464rem + 0.18vw, 0.625rem)',
+                'nav-header': 'clamp(1.5rem, 0.786rem + 3.57vw, 4rem)', // 1                
+            },
+            letterSpacing: {
+                widest: '.25em',
             },
              colors: {
                  'b-gray-100': 'rgb(233, 233, 233)',
@@ -53,7 +58,10 @@
              maxWidth: {
                  '120': '7.5rem',
                  '250': '15.625rem',
-             }
+             },
+             animation: {
+                'spin-slow': 'spin 3s linear 2',
+              }
          }
      },
      variants: {},

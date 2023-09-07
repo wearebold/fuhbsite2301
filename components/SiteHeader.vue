@@ -1,6 +1,6 @@
 <template>
-  <header class="py-6 border-b-2 border-slate-50 border-solid">
-    <div class="container mx-auto | grid grid-cols-3 items-center gap-24">
+  <header class="px-4 py-6">
+    <div class="container mx-auto | grid grid-cols-3 items-center gap-6">
       <div>
         <NuxtLink to="/book" class="text-xs tracking-widest uppercase semibold">Book</NuxtLink>
       </div>
@@ -20,12 +20,7 @@
         </NuxtLink>
       </div>
       <div class="flex justify-end">
-        <NuxtLink to="/book" class="text-xs tracking-widest uppercase semibold">Menu</NuxtLink>
-        <nav>
-          <!-- <NuxtLink to="/services" class="block">Services</NuxtLink>
-        <NuxtLink to="/services/hair" class="block">Hair</NuxtLink>
-        <NuxtLink to="/services/beauty" class="block">Beauty</NuxtLink> -->
-        </nav>
+        <SiteNav />
       </div>
     </div>
   </header>
