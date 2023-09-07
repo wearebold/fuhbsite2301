@@ -14,19 +14,19 @@
                 <span class="block w-px h-6 bg-neutral-100 mx-auto mt-4"></span>
               </li>
               <li>
-                <NuxtLink to="/services/bridal" class="block font-header text-h1">Bridal</NuxtLink>
+                <NuxtLink to="/services/hair/bridal" class="block font-header text-h1">Bridal</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/services/cutting" class="block font-header text-h1">Cutting</NuxtLink>
+                <NuxtLink to="/services/hair/cutting" class="block font-header text-h1">Cutting</NuxtLink>
               </li>                
               <li>
-                <NuxtLink to="/services/balayage-colour" class="block font-header text-h1">Balayage</NuxtLink>
+                <NuxtLink to="/services/hair/balayage-colour" class="block font-header text-h1">Balayage</NuxtLink>
               </li> 
               <li>
-                <NuxtLink to="/services/balayage-colour" class="block font-header text-h1">Colouring</NuxtLink>
+                <NuxtLink to="/services/hair/colouring" class="block font-header text-h1">Colouring</NuxtLink>
               </li>                    
               <li>
-                <NuxtLink to="/services/treatments" class="block font-header text-h1">Treatments</NuxtLink>
+                <NuxtLink to="/services/hair/treatments" class="block font-header text-h1">Treatments</NuxtLink>
               </li>                                                                  
             </ul>
           </li>
@@ -42,19 +42,19 @@
                   <span class="block w-px h-6 bg-neutral-100 mx-auto mt-4"></span>
               </li>
               <li>
-                <NuxtLink to="/services/caci" class="block font-header text-h1">CACI</NuxtLink>
+                <NuxtLink to="/services/beauty/caci" class="block font-header text-h1">CACI</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/services/nails" class="block font-header text-h1">Nails</NuxtLink>
+                <NuxtLink to="/services/beauty/nails" class="block font-header text-h1">Nails</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/services/waxing" class="block font-header text-h1">Waxing</NuxtLink>
+                <NuxtLink to="/services/beauty/waxing" class="block font-header text-h1">Waxing</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/services/hd-brows" class="block font-header text-h1">HD Brows</NuxtLink>
+                <NuxtLink to="/services/beauty/hd-brows" class="block font-header text-h1">HD Brows</NuxtLink>
               </li>                            
               <li>
-                <NuxtLink to="/services/dermalogica" class="block font-header text-h1">Dermalogica</NuxtLink>
+                <NuxtLink to="/services/beauty/dermalogica" class="block font-header text-h1">Dermalogica</NuxtLink>
               </li>              
             </ul>
           </li>          
