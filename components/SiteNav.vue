@@ -23,8 +23,8 @@
         <span class="block w-px h-8 bg-neutral-100 mx-auto mt-4"></span>
       </h2>
       <ul class="flex flex-wrap flex-row justify-center items-center h-full max-w-screen-xl px-4 mx-auto">
-        <li class="basis-4/12">
-          <ul class="flex flex-col gap-8 items-start | md:items-center">
+        <li class="basis-6/12 | md:basis-4/12">
+          <ul class="flex flex-col gap-4 items-center | md:gap-8">
             <li>
               <span class="text-caps uppercase tracking-widest">Services</span>
               <span class="block w-px h-6 bg-neutral-100 mx-auto mt-4"></span>
@@ -33,20 +33,20 @@
               <NuxtLink to="/services/hair" class="block font-header text-nav-header">Hair</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/services/beauty" class="block font-header text-nav-header">Beauty</NuxtLink>
+              <NuxtLink to="/services/bridal" class="block font-header text-nav-header">Bridal</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/services/bridal" class="block font-header text-nav-header">Bridal</NuxtLink>
+              <NuxtLink to="/services/beauty" class="block font-header text-nav-header">Beauty</NuxtLink>
             </li>            
           </ul>
         </li>
-        <li class="basis-4/12 | flex flex-col gap-8 items-center">
+        <li class="basis-4/12 | hidden flex-col gap-8 items-center | md:flex">
             <NuxtLink to="/book" class="block w-full" style="max-width: clamp(4rem, 2.182rem + 9.09vw, 9rem);" aria-label="Book Now">
                 <img class="motion-safe:hover:animate-spin-slow" src="~/assets/img/book-now.svg" alt="Book Now" />
             </NuxtLink>
         </li>
-        <li class="basis-4/12">
-          <ul class="flex flex-col gap-8 items-end | md:items-center">
+        <li class="basis-6/12 | md:basis-4/12">
+          <ul class="flex flex-col gap-4 items-center | md:gap-8">
             <li>
                 <span class="text-caps uppercase tracking-widest">Info</span>
                 <span class="block w-px h-6 bg-neutral-100 mx-auto mt-4"></span>

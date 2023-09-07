@@ -55,12 +55,14 @@
     height: 100vh;
     height: 100svh;
     height: calc(100svh - 94px);
-    transform: scale(1);    
+    transform: scale(1);       
     transform-origin: top center;
-    transition: transform 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    will-change: transform;
+    transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
     &.anim-scale {
         transform: scale(0.9);
+        // clip-path: inset(0% 35% -100% 35% round 100vw);
     }
   }
 

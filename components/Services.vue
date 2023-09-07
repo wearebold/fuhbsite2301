@@ -67,7 +67,7 @@
                   <img class="motion-safe:hover:animate-spin-slow" src="~/assets/img/book-now.svg" alt="Book Now" />
               </NuxtLink>
             </div>
-            <div class="px-4 mx-auto flex flex-col items-center justify-center | md:hidden">
+            <div class="px-4 mx-auto flex flex-col items-center justify-center | md:hidden3">
           <span class="block w-px h-8 bg-neutral-100 mx-auto my-4"></span>
         </div>            
     </section>
