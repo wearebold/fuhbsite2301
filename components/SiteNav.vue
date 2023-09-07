@@ -1,7 +1,7 @@
 <template>
   <div>
     <button
-      class="text-xs tracking-widest uppercase semibold relative z-20"
+      class="text-caps tracking-widest uppercase semibold relative z-20"
       :class="{ 'text-neutral-100': isOpen, 'text-neutral-950': !isOpen }"
       ref="menuButton"
       @click="toggleMenu"
@@ -19,7 +19,7 @@
       @keydown.escape="closeMenu"
     >
       <h2 class="text-xs uppercase tracking-widest font-body | flex flex-col items-center">
-        <span class="text-xs tracking-widest uppercase semibold">Menu</span>
+        <span class="text-caps tracking-widest uppercase semibold">Menu</span>
         <span class="block w-px h-8 bg-neutral-100 mx-auto mt-4"></span>
       </h2>
       <ul class="flex flex-wrap flex-row justify-center items-center h-full max-w-screen-xl px-4 mx-auto">

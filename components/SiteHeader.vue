@@ -2,7 +2,7 @@
   <header class="px-4 py-6">
     <div class="container mx-auto | grid grid-cols-3 items-center gap-6" style="max-width: 90vw;">
       <div>
-        <NuxtLink to="/book" class="text-xs tracking-widest uppercase semibold">Book</NuxtLink>
+        <NuxtLink to="/book" class="text-caps tracking-widest uppercase semibold">Book</NuxtLink>
       </div>
       <div class="flex justify-center">
         <NuxtLink to="/" rel="home" class="flex w-36">

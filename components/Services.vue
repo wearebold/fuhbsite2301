@@ -3,12 +3,12 @@
       class="site-nav | bg-neutral-950 text-neutral-100 antialiased | py-16 sm:py-20 md:py-24 lg:py-28"       
       >
         <h2 class="text-xs uppercase tracking-widest font-body | flex flex-col items-center">
-          <span class="text-xs tracking-widest uppercase semibold">Services</span>
+          <span class="text-caps tracking-widest uppercase semibold">Services</span>
           <span class="block w-px h-8 bg-neutral-100 mx-auto mt-4"></span>
         </h2>
-        <ul class="grid grid-cols-3 justify-center items-center h-full max-w-screen-xl w-full px-4 mx-auto">
+        <ul class="grid grid-cols-2 gap-8 justify-center items-center h-full max-w-screen-xl w-full px-4 mx-auto | md:grid-cols-3 md:gap-0">
           <li class="basis-4/12">
-            <ul class="flex flex-col gap-8 items-start | md:items-center">
+            <ul class="flex flex-col gap-4 items-center | md:gap-8">
               <li>
                 <span class="text-caps uppercase tracking-widest">Hair</span>
                 <span class="block w-px h-6 bg-neutral-100 mx-auto mt-4"></span>
@@ -30,13 +30,13 @@
               </li>                                                                  
             </ul>
           </li>
-          <li class="basis-4/12 | flex flex-col gap-8 items-center">
+          <li class="basis-4/12 | flex-col gap-4 items-center hidden | md:flex md:gap-8">
               <NuxtLink to="/book" class="block w-full" style="max-width: clamp(4rem, 2.182rem + 9.09vw, 9rem);" aria-label="Book Now">
                   <img class="motion-safe:hover:animate-spin-slow" src="~/assets/img/book-now.svg" alt="Book Now" />
               </NuxtLink>
           </li>
           <li class="basis-4/12">
-            <ul class="flex flex-col gap-8 items-end | md:items-center">
+            <ul class="flex flex-col gap-4 items-center | md:gap-8">
               <li>
                   <span class="text-caps uppercase tracking-widest">Beauty</span>
                   <span class="block w-px h-6 bg-neutral-100 mx-auto mt-4"></span>
@@ -59,10 +59,17 @@
             </ul>
           </li>          
         </ul>
-        <div class="px-4 mx-auto flex flex-col items-center justify-center">
-          <span class="block w-px h-8 bg-neutral-100 mx-auto mb-4"></span>
-          <span class="text-caps uppercase tracking-widest">Book</span>
+        <div class="px-4 mx-auto flex flex-col items-center justify-center mt-4 | md:hidden">
+          <span class="block w-px h-8 bg-neutral-100 mx-auto my-4"></span>
         </div>
+        <div class="flex flex-col gap-4 items-center | md:hidden">
+              <NuxtLink to="/book" class="block w-full" style="max-width: clamp(4rem, 2.182rem + 9.09vw, 9rem);" aria-label="Book Now">
+                  <img class="motion-safe:hover:animate-spin-slow" src="~/assets/img/book-now.svg" alt="Book Now" />
+              </NuxtLink>
+            </div>
+            <div class="px-4 mx-auto flex flex-col items-center justify-center | md:hidden">
+          <span class="block w-px h-8 bg-neutral-100 mx-auto my-4"></span>
+        </div>            
     </section>
   </template>
   
