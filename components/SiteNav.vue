@@ -30,18 +30,18 @@
               <span class="block w-px h-6 bg-neutral-100 mx-auto mt-4"></span>
             </li>
             <li>
-              <NuxtLink to="/services/hair" class="block font-header text-nav-header">Hair</NuxtLink>
+              <NuxtLink @click="toggleMenu" to="/services/hair" class="block font-header text-nav-header">Hair</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/services/bridal" class="block font-header text-nav-header">Bridal</NuxtLink>
+              <NuxtLink @click="toggleMenu" to="/services/bridal" class="block font-header text-nav-header">Bridal</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/services/beauty" class="block font-header text-nav-header">Beauty</NuxtLink>
+              <NuxtLink @click="toggleMenu" to="/services/beauty" class="block font-header text-nav-header">Beauty</NuxtLink>
             </li>            
           </ul>
         </li>
         <li class="basis-4/12 | hidden flex-col gap-8 items-center | md:flex">
-            <NuxtLink to="/book" class="block w-full" style="max-width: clamp(4rem, 2.182rem + 9.09vw, 9rem);" aria-label="Book Now">
+            <NuxtLink @click="toggleMenu" to="/book" class="block w-full" style="max-width: clamp(4rem, 2.182rem + 9.09vw, 9rem);" aria-label="Book Now">
                 <img class="motion-safe:hover:animate-spin-slow" src="~/assets/img/book-now.svg" alt="Book Now" />
             </NuxtLink>
         </li>
@@ -52,13 +52,13 @@
                 <span class="block w-px h-6 bg-neutral-100 mx-auto mt-4"></span>
             </li>
             <li>
-              <NuxtLink to="/faqs" class="block font-header text-nav-header">FAQs</NuxtLink>
+              <NuxtLink @click="toggleMenu" to="/faqs" class="block font-header text-nav-header">FAQs</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/journal" class="block font-header text-nav-header">Journal</NuxtLink>
+              <NuxtLink @click="toggleMenu" to="/journal" class="block font-header text-nav-header">Journal</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/about-us" class="block font-header text-nav-header">About Us</NuxtLink>
+              <NuxtLink @click="toggleMenu" to="/about-us" class="block font-header text-nav-header">About Us</NuxtLink>
             </li>
           </ul>
         </li>
@@ -67,7 +67,7 @@
                 <span>Get in touch</span>
                 <span class="block w-px h-8 bg-neutral-100 mx-auto mt-4"></span>
             </span>
-            <NuxtLink to="/contact-us" class="block font-header text-nav-header">Contact Us</NuxtLink>
+            <NuxtLink @click="toggleMenu" to="/contact-us" class="block font-header text-nav-header">Contact Us</NuxtLink>
         </li>
       </ul>
     </nav>

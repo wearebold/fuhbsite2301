@@ -1,3 +1,9 @@
+:root {
+  --cursor-stroke: none; 
+	--cursor-fill: #d999bf; 
+  --background-split: #d999bf;
+	--cursor-stroke-width: 1px; 
+}
 
 @font-face {
     font-family: 'F37 Caslon Hairline';
@@ -12,8 +18,35 @@ html {
     scroll-behavior: smooth;
   }
 
-body {
+body { 
     @apply font-body text-neutral-950;
+}
+
+.cursor { 
+	display: none; 
+}
+
+@media (any-pointer:fine) {
+	.cursor {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		pointer-events: none;
+		z-index: 1001;
+	}
+
+	.cursor__inner {
+		fill: var(--cursor-fill);
+		stroke: var(--cursor-stroke);
+		stroke-width: var(--cursor-stroke-width);
+		opacity: 0.7;
+	}
+
+	.no-js .cursor {
+		display: none;
+	}
+
 }
 
 #__nuxt {

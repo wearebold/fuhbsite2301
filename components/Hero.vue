@@ -12,7 +12,7 @@
         <div class="hero-image">
             <NuxtImg
             @load="animateHeroImage"
-            class="hero__img h-full w-full object-cover grayscale grayscale-transition"
+            class="hero__img h-full w-full object-cover"
             preload
             :src="heroImagePath"
             alt="Hero Image"
@@ -37,8 +37,8 @@
         // Animate the hero image by adding a class to remove grayscale effect
         const hero = this.$el.querySelector(".hero");
         hero.classList.add('anim-scale');
-        const heroImage = this.$el.querySelector('.grayscale-transition');
-        heroImage.classList.remove('grayscale');
+        // const heroImage = this.$el.querySelector('.grayscale-transition');
+        // heroImage.classList.remove('grayscale');
         
       },
     },
@@ -67,7 +67,7 @@
   }
 
   .hero__bg {
-    background: linear-gradient(0deg, rgba(10,10,10,1) 0%, rgba(10,10,10,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(0deg, var(--background-split) 0%, var(--background-split) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
 }
   
   .hero-content {

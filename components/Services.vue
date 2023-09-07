@@ -1,6 +1,7 @@
 <template> 
       <section
-      class="site-nav | bg-neutral-950 text-neutral-100 antialiased | py-16 sm:py-20 md:py-24 lg:py-28"       
+      class="site-nav | text-neutral-100 antialiased | py-16 sm:py-20 md:py-24 lg:py-28" 
+      style="background-color: var(--background-split);"      
       >
         <h2 class="text-xs uppercase tracking-widest font-body | flex flex-col items-center">
           <span class="text-caps tracking-widest uppercase semibold">Services</span>
