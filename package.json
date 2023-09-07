@@ -16,6 +16,7 @@
     "nuxt": "^3.7.0"
   },
   "dependencies": {
-    "@nuxt/image": "^1.0.0-rc.1"
+    "@nuxt/image": "^1.0.0-rc.1",
+    "sass": "^1.66.1"
   }
 }

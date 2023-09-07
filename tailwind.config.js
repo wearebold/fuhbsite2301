@@ -3,7 +3,6 @@
  **
  ** Docs: https://tailwindcss.com/docs/configuration
  */
- import defaultTheme from 'tailwindcss/defaultTheme'
 //  import tailwindTypography from '@tailwindcss/typography'
  
  export default {
