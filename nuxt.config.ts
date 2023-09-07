@@ -3,6 +3,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   pages: true,
+  nitro: {
+    preset: 'netlify', 
+    prerender: {
+      crawlLinks: true
+    }     
+ }, 
   build: {
     transpile: ['gsap'],
   },
