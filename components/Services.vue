@@ -17,9 +17,13 @@
               </li>
               <li>
                 <NuxtLink
+                  data-theme-primary="#BF9663"
+                  data-theme-secondary="#A67232"
                   data-anim-hover                   
                   to="/services/hair/bridal" 
                   class="block font-header text-services"
+                  @mouseenter="onMouseEnter"
+                  @mouseleave="onMouseLeave"
                   >Bridal
                   <NuxtImg
                   class="h-full w-full object-cover hidden"
@@ -32,9 +36,13 @@
               </li>
               <li>
                 <NuxtLink 
+                data-theme-primary="#90A891"
+                  data-theme-secondary="#29808E"
                 data-anim-hover
                 to="/services/hair/cutting"
                 class="block font-header text-services"
+                @mouseenter="onMouseEnter"
+                  @mouseleave="onMouseLeave"
                 >Cutting
                 <NuxtImg
                   class="h-full w-full object-cover hidden"
@@ -100,7 +108,33 @@
   </template>
   
   <script>
- 
+ export default {
+  data() {
+    return {
+      originalPrimaryBg: "#d999bf",
+      originalPrimarySecondary: "#7b064d",
+    };
+  },
+  methods: {
+    onMouseEnter(event) {
+      const primaryBg = event.target.getAttribute("data-theme-primary");
+      const primarySecondary = event.target.getAttribute("data-theme-secondary");
+
+      // Store the original values
+      this.originalPrimaryBg = getComputedStyle(document.documentElement).getPropertyValue("--primary-bg");
+      this.originalPrimarySecondary = getComputedStyle(document.documentElement).getPropertyValue("--primary-secondary");
+
+      // Update CSS custom properties
+      document.documentElement.style.setProperty("--primary-bg", primaryBg);
+      document.documentElement.style.setProperty("--primary-secondary", primarySecondary);
+    },
+    onMouseLeave() {
+      // Revert to the original CSS custom properties
+      document.documentElement.style.setProperty("--primary-bg", this.originalPrimaryBg);
+      document.documentElement.style.setProperty("--primary-secondary", this.originalPrimarySecondary);
+    },
+  },
+};
   </script>
   
   <style lang="scss" scoped>

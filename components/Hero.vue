@@ -1,6 +1,12 @@
 <!-- components/Hero.vue -->
 <template>
-    <div class="hero__bg">
+    <div class="relative">
+
+        <div class="hero__bg | grid grid-rows-2">
+          <div></div>
+          <div style="background: var(--primary-bg);"></div>
+        </div>
+
         <section class="hero">
         <!-- <div class="hero-content">
             <h1 class="hero-title">{{ title }}</h1>
@@ -9,17 +15,17 @@
             <button class="cta-button">{{ buttonLabel }}</button>
             </div>
         </div> -->
-        <div class="hero-image">
-            <NuxtImg
-            @load="animateHeroImage"
-            class="hero__img h-full w-full object-cover"
-            preload
-            :src="heroImagePath"
-            alt="Hero Image"
-            layout="fill"
-            object-fit="cover"
-            />
-        </div>
+          <div class="hero-image">
+              <NuxtImg
+              @load="animateHeroImage"
+              class="hero__img h-full w-full object-cover"
+              preload
+              :src="heroImagePath"
+              alt="Hero Image"
+              layout="fill"
+              object-fit="cover"
+              />
+          </div>
         </section>
     </div>
   </template>
@@ -67,9 +73,15 @@
   }
 
   .hero__bg {
-    background: linear-gradient(0deg, var(--primary-bg) 0%, var(--primary-bg) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    height: 100vh;
+    height: 100svh;
+    height: calc(100svh - 94px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    //background: linear-gradient(0deg, var(--primary-bg) 0%, var(--primary-bg) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
 }
-  
   .hero-content {
     text-align: center;
     z-index: 1;
