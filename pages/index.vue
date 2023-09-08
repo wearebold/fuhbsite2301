@@ -9,6 +9,8 @@
 
         <Services />
 
+        <PostsLatest />
+
         <NuxtErrorBoundary @error="someErrorLogger">
             <!-- You use the default slot to render your content -->
             <template #error="{ error, clearError }">

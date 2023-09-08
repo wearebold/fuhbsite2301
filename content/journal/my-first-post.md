@@ -1,8 +1,12 @@
 ---
 title: 'First Post'
 description: 'This is my first article!'
-img: 'img/cover_1.jpg'
+img: '/dummy-journal.jpg'
 tags: [Nuxt, Content, Learning, first]
+date: 1694158391686
+dateFormated: 08.07.23
+author: Michelle Evans
+authorProfileImg: ''
 ---
 
 ## My first blog post

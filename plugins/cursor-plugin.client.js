@@ -86,13 +86,13 @@ export default defineNuxtPlugin(nuxtApp => {
 
       // Listen to mouse events using event delegation
       document.addEventListener('mouseenter', (event) => {
-        if (event.target.tagName === 'A') {
+        if (event.target.tagName === 'A' || event.target.tagName === 'BUTTON') {
           cursor.enter();
         }
       },true);
 
       document.addEventListener('mouseleave', (event) => {
-        if (event.target.tagName === 'A') {
+        if (event.target.tagName === 'A' || event.target.tagName === 'BUTTON') {
           cursor.leave();
         }
       },true);

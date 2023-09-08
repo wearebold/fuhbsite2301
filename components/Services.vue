@@ -60,17 +60,13 @@
             </ul>
           </li>          
         </ul>
-        <div class="px-4 mx-auto flex flex-col items-center justify-center mt-4 | md:hidden">
-          <span class="block w-px h-8 bg-neutral-100 mx-auto my-4"></span>
-        </div>
-        <div class="flex flex-col gap-4 items-center | md:hidden">
-              <NuxtLink to="/book" class="block w-full" style="max-width: clamp(4rem, 2.182rem + 9.09vw, 9rem);" aria-label="Book Now">
-                  <img class="motion-safe:hover:animate-spin-slow" src="~/assets/img/book-now.svg" alt="Book Now" />
-              </NuxtLink>
-            </div>
-            <div class="px-4 mx-auto flex flex-col items-center justify-center | md:hidden3">
-          <span class="block w-px h-8 bg-neutral-100 mx-auto my-4"></span>
-        </div>            
+
+        <div class="flex flex-col gap-4 items-center mt-8 | md:hidden">
+          <NuxtLink to="/book" class="block w-full" style="max-width: clamp(4rem, 2.182rem + 9.09vw, 9rem);" aria-label="Book Now">
+              <img class="motion-safe:hover:animate-spin-slow" src="~/assets/img/book-now.svg" alt="Book Now" />
+          </NuxtLink>
+        </div>        
+
     </section>
   </template>
   
@@ -83,7 +79,7 @@
           transition: color 0.2s ease-in-out;
           /* Hover effect to make hovered <a> tags white */
           &:hover {
-              @apply text-neutral-400; /* Hovered links stay white */
+              color: var(--state-link); /* Hovered links stay white */
           }
   
           /* Make other <a> tags greyed out */
