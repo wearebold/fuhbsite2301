@@ -127,11 +127,14 @@
       // Update CSS custom properties
       document.documentElement.style.setProperty("--primary-bg", primaryBg);
       document.documentElement.style.setProperty("--primary-secondary", primarySecondary);
+      document.documentElement.style.setProperty("--cursor-fill", primarySecondary);
+      
     },
     onMouseLeave() {
       // Revert to the original CSS custom properties
       document.documentElement.style.setProperty("--primary-bg", this.originalPrimaryBg);
       document.documentElement.style.setProperty("--primary-secondary", this.originalPrimarySecondary);
+      document.documentElement.style.setProperty("--cursor-fill", this.originalPrimarySecondary);
     },
   },
 };
