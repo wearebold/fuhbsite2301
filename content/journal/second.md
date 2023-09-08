@@ -1,7 +1,7 @@
 ---
 title: 'Hello World'
 description: 'This is my first article!'
-img: '/dummy-journal.jpg'
+img: '/dummy-journal_01.jpg'
 tags: [Nuxt, Content, Learning, first]
 date: 1694158391686
 dateFormated: 10.08.23

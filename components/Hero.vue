@@ -58,7 +58,7 @@
     transform: scale(1);       
     transform-origin: top center;
     will-change: transform;
-    transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.3s 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
     &.anim-scale {
         transform: scale(0.9);
@@ -67,7 +67,7 @@
   }
 
   .hero__bg {
-    background: linear-gradient(0deg, var(--background-split) 0%, var(--background-split) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(0deg, var(--primary-bg) 0%, var(--primary-bg) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
 }
   
   .hero-content {
@@ -103,7 +103,7 @@
   
   /* Define a CSS transition for the grayscale property */
   .grayscale-transition {
-    transition: filter 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: filter 0.3s 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   } 
 
   </style>

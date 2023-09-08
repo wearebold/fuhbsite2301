@@ -1,10 +1,10 @@
 <template>
   <section
     class="text-neutral-100 antialiased | py-16 sm:py-20 md:py-24 lg:py-28"
-    style="background-color: var(--background-split)"
+    style="background-color: var(--primary-secondary)"
   >
     <h2
-      class="text-xs uppercase tracking-widest font-body | flex flex-col items-center mb-6 | sm:mb-10 | md:mb-14 | lg:mb-20"
+      class="text-xs uppercase tracking-widest font-body | flex flex-col items-center mb-6"
     >
       <span class="text-caps tracking-widest uppercase semibold">Journal</span>
       <span class="block w-px h-8 bg-neutral-100 mx-auto mt-4"></span>
@@ -31,7 +31,7 @@
       <!-- Default list slot -->
       <template v-slot="{ list }">
         <div
-          class="article-list | grid grid-cols-1 gap-x-4 gap-y-8 justify-center items-start h-full max-w-screen-xl w-full px-4 mx-auto | sm:grid-cols-2 sm:gap-8 | md:grid-cols-3"
+          class="article-list | grid grid-cols-1 gap-x-4 gap-y-8 justify-center items-start h-full max-w-screen-xl w-full px-4 mx-auto mb-32 | sm:grid-cols-2 sm:gap-8 | md:grid-cols-3"
         >
           <article
             v-for="(article, index) in list"
@@ -44,7 +44,7 @@
           >
             <div class="flex flex-col-reverse gap-4">
                 <NuxtLink
-                    class="article-list__link | a11y-link | flex flex-col justify-center items-center text-center"
+                    class="article-list__link | a11y-link | flex flex-col justify-center items-center text-center z-10"
                     :to="article._path"
                 >
                     <time
@@ -93,9 +93,19 @@ const filter = ref(tags?.split(","));
 </script>
 
 <style lang="scss" scoped>
+.article-list .article-list__item:nth-child(2) {
+    .aritcle-list__img {
+        // mix-blend-mode: normal;
+
+        @media (min-width: 768px) {
+            margin-top: 33%;
+        }
+    }    
+}
 .aritcle-list__img {
-    clip-path: inset(0% 0% 0% 0% round 100vw);
-  transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      clip-path: inset(0% 0% -100% 0% round 100vw);
+    // clip-path: inset(0% 0% 0% 0% round 100vw);
+  transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transform-origin: center;
   transform: scale(0.9);
   mix-blend-mode: luminosity;
@@ -105,9 +115,8 @@ const filter = ref(tags?.split(","));
   &:hover,
   &:focus {
     + .aritcle-list__img {
-      will-change: clip-path;      
-      clip-path: inset(0% 0% -100% 0% round 100vw);
-      transform: scale(1);
+    //   will-change: clip-path;          
+      transform: scale(1.125);
       mix-blend-mode: normal;
     }
   }

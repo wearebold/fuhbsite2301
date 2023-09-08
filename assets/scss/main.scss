@@ -1,8 +1,9 @@
 :root {
   --cursor-stroke: none; 
 	--cursor-fill: #ce1985; 
-  --background-split: #d999bf;
-  --state-link: #7b064d;
+  --primary-bg: #d999bf;
+  --primary-secondary: #7b064d;
+  --primary-state: var(--primary-secondary);
 	--cursor-stroke-width: 1px; 
 }
 
@@ -21,6 +22,16 @@ html {
 
 body { 
     @apply font-body text-neutral-950;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .cursor { 
@@ -61,6 +72,7 @@ h4,
 h5,
 h6 {
   font-weight: 400 !important;
+  text-wrap: balance;
   @apply font-header;
 }
 
