@@ -1,7 +1,7 @@
 ---
-title: 'HD Brows'
+title: 'Brows'
 description: 'This is my description!'
-img: 'https://picsum.photos/id/237/200/300'
+img: '/dummy-journal_01.jpg'
 ---
 
 Totally tailor-made for you – not a stencil in sight. High Definition Brows will leave your brows looking fuller, thicker and brighter than ever before. It’s an eyebrow tint, wax, tweeze and tint in one, which means that you can have gorgeous brows in just one appointment.

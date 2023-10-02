@@ -1,5 +1,7 @@
 ---
 title: 'Colouring'
+themePrimary: "#bfad63"
+themeSecondary: "#a6a432"
 description: 'This is my description!'
-img: 'https://picsum.photos/id/237/200/300'
+img: '/dummy-journal.jpg'
 ---

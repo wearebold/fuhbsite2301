@@ -1,5 +1,7 @@
 ---
 title: 'Treatments'
+themePrimary: "#90a4a8"
+themeSecondary: "#29808E"
 description: 'This is my description!'
-img: 'https://picsum.photos/id/237/200/300'
+img: '/dummy-journal.jpg'
 ---

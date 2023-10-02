@@ -6,46 +6,60 @@ function map(value, in_min, in_max, out_min, out_max) {
   return ((value - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 }
 
-class ArcTopPlaneGeometry extends THREE.BufferGeometry {
-    constructor(width, height, arcRadius, segments) {
-      super();
-  
-      // Define the number of vertices for the plane
-      const planeVertices = [];
-  
-      for (let i = 0; i <= segments; i++) {
-        const x = (i / segments) * width - width / 2;
-        const z = Math.sqrt(Math.pow(arcRadius, 2) - Math.pow(x, 2));
-        planeVertices.push(x, 0, z);
+class NormanWindowGeometry extends THREE.BufferGeometry {
+  constructor(width, height, semicircleDiameter, widthSegments = 32, heightSegments = 32) {
+    super();
+
+    const vertices = [];
+    const indices = [];
+
+    // Create the rectangle part of the window
+    const halfWidth = width / 2;
+    const halfHeight = height / 2;
+    for (let y = 0; y <= heightSegments; y++) {
+      for (let x = 0; x <= widthSegments; x++) {
+        const u = x / widthSegments;
+        const v = y / heightSegments;
+
+        const xPos = lerp(-halfWidth, halfWidth, u);
+        const yPos = lerp(-halfHeight, halfHeight, v);
+
+        vertices.push(xPos, yPos, 0);
       }
-  
-      // Create vertices for the arc-shaped top
-      for (let i = 0; i <= segments; i++) {
-        const x = (i / segments) * width - width / 2;
-        const y = height;
-        const z = Math.sqrt(Math.pow(arcRadius, 2) - Math.pow(x, 2));
-        planeVertices.push(x, y, z);
-      }
-  
-      // Create faces connecting the vertices
-      const indices = [];
-      for (let i = 0; i < segments; i++) {
-        const baseIndex = i;
-        const nextBaseIndex = (i + 1) % segments;
-        const topIndex = i + segments;
-        const nextTopIndex = (i + 1) % segments + segments;
-  
-        // Create two triangles for each segment
-        indices.push(baseIndex, topIndex, nextBaseIndex);
-        indices.push(nextBaseIndex, topIndex, nextTopIndex);
-      }
-  
-      // Set the vertices and indices
-      this.setAttribute('position', new THREE.Float32BufferAttribute(planeVertices, 3));
-      this.setIndex(indices);
-      this.computeVertexNormals(); // Use computeVertexNormals instead
     }
+
+    // Create the semicircle part of the window
+    const radius = semicircleDiameter / 2;
+    const centerX = 0;
+    const centerY = halfHeight + radius;
+    const numSemicircleSegments = 64; // You can adjust this for smoother or coarser curvature
+
+    for (let i = 0; i <= numSemicircleSegments; i++) {
+      const angle = (i / numSemicircleSegments) * Math.PI;
+      const xPos = centerX + Math.sin(angle) * radius;
+      const yPos = centerY + Math.cos(angle) * radius;
+      vertices.push(xPos, yPos, 0);
+    }
+
+    // Define the indices to create triangles
+    for (let y = 0; y < heightSegments; y++) {
+      for (let x = 0; x < widthSegments; x++) {
+        const base = x + y * (widthSegments + 1);
+        const topLeft = base;
+        const topRight = base + 1;
+        const bottomLeft = base + widthSegments + 1;
+        const bottomRight = base + widthSegments + 2;
+
+        indices.push(topLeft, topRight, bottomLeft);
+        indices.push(topRight, bottomRight, bottomLeft);
+      }
+    }
+
+    this.setIndex(indices);
+    this.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
   }
+}
+
 
 class EffectShell {
   constructor(container = document.body, itemsWrapper = null) {
@@ -258,6 +272,7 @@ class StretchEffect extends EffectShell {
     this.position = new THREE.Vector3(0, 0, 0);
     this.scale = new THREE.Vector3(1, 1, 1);
     this.geometry = new THREE.PlaneGeometry(1, 1, 32, 32);
+    
     // this.geometry = new ArcTopPlaneGeometry(1, 2, 2, 32);
     
     this.uniforms = {
@@ -270,6 +285,15 @@ class StretchEffect extends EffectShell {
       uAlpha: {
         value: 0,
       },
+      uWindowWidth: {
+        value: 1,
+      },
+      uWindowHeight: {
+        value: 2,
+      },
+      uSemicircleDiameter: {
+        value: 1,        
+      }
     };
     this.material = new THREE.ShaderMaterial({
       uniforms: this.uniforms,
@@ -293,20 +317,39 @@ class StretchEffect extends EffectShell {
           }
         `,
       fragmentShader: `
-          uniform sampler2D uTexture;
-          uniform float uAlpha;
-  
-          varying vec2 vUv;
-  
-          vec2 scaleUV(vec2 uv, float scale) {
-            float center = 0.5;
-            return ((uv - center) * scale) + center;
-          }
-  
-          void main() {
-            vec3 color = texture2D(uTexture, scaleUV(vUv, 0.8)).rgb;
-            gl_FragColor = vec4(color, uAlpha);
-          }
+      uniform sampler2D uTexture;
+      uniform float uAlpha;
+      uniform float uWindowWidth; // Width of the rectangle
+      uniform float uWindowHeight; // Height of the rectangle
+      uniform float uSemicircleDiameter; // Diameter of the semicircle
+
+      varying vec2 vUv;
+
+      void main() {
+        vec3 color = texture2D(uTexture, vUv).rgb;
+
+        float centerX = 0.5;
+        float centerY = uWindowHeight / (2.0 * uSemicircleDiameter);
+
+        // Calculate the distance from the current pixel to the center
+        float dx = abs(vUv.x - centerX);
+        float dy = abs(vUv.y - centerY);
+        float dist = sqrt(dx * dx + dy * dy);
+
+        // Check if the pixel is inside the Norman window shape
+        if (
+          vUv.x >= centerX - uWindowWidth / 2.0 &&
+          vUv.x <= centerX + uWindowWidth / 2.0 &&
+          vUv.y >= 0.0 &&
+          vUv.y <= uWindowHeight
+        ) {
+          gl_FragColor = vec4(color, uAlpha);
+        } else if (dist <= uSemicircleDiameter / 2.0) {
+          gl_FragColor = vec4(color, uAlpha);
+        } else {
+          discard;
+        }
+      }
         `,
       transparent: true,
     });

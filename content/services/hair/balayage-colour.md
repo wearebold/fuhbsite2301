@@ -1,5 +1,7 @@
 ---
 title: 'Balayage'
+themePrimary: "#bf6374"
+themeSecondary: "#a63253"
 description: 'This is my description!'
-img: 'https://picsum.photos/id/237/200/300'
+img: '/dummy-journal.jpg'
 ---

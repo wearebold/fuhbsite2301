@@ -1,5 +1,7 @@
 ---
 title: 'Cutting'
+themePrimary: "#90A891"
+themeSecondary: "#29808E"
 description: 'This is my description!'
-img: 'https://picsum.photos/id/237/200/300'
+img: '/dummy-journal_01.jpg'
 ---

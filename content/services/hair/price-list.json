@@ -1,0 +1,204 @@
+{
+    "services": [
+      {
+        "category": "hair",
+        "services": [
+          {
+            "name": "Cut & Finish",
+            "prices": {
+              "Stylist": "£42",
+              "Premier Stylist": "£48",
+              "Director": "£50"
+            }
+          },
+          {
+            "name": "Men's Cut & Finish",
+            "prices": {
+              "Stylist": "£24",
+              "Premier Stylist": "£26",
+              "Director": "£28"
+            }
+          },
+          {
+            "name": "Restyle",
+            "prices": {
+              "Stylist": "£46",
+              "Premier Stylist": "£52",
+              "Director": "£54"
+            }
+          },
+          {
+            "name": "Hair Up",
+            "prices": {
+              "Stylist": "£40",
+              "Premier Stylist": "£45",
+              "Director": "£50"
+            }
+          },
+          {
+            "name": "Hair Styling",
+            "prices": {
+              "Stylist": "£25",
+              "Premier Stylist": "£30",
+              "Director": "£35"
+            }
+          }
+        ]
+      },
+      {
+        "category": "Blow Dry",
+        "services": [
+          {
+            "name": "Blow Dry",
+            "prices": {
+              "Stylist": "£30",
+              "Premier Stylist": "£32",
+              "Director": "£34"
+            }
+          },
+          {
+            "name": "Blow Dry",
+            "prices": {
+              "Stylist": "£25",
+              "Premier Stylist": "£28",
+              "Director": "£32"
+            }
+          },
+          {
+            "name": "Blow Dry & Set",
+            "prices": {
+              "Stylist": "£30",
+              "Premier Stylist": "£34",
+              "Director": "£38"
+            }
+          }
+        ]
+      },
+      {
+        "category": "Balayage",
+        "services": [
+          {
+            "name": "First Time Balayage",
+            "prices": {
+              "Stylist": "£95",
+              "Premier Stylist": "£105",
+              "Director": "£115"
+            }
+          },
+          {
+            "name": "Balayage Refresh",
+            "prices": {
+              "Stylist": "£80",
+              "Premier Stylist": "£85",
+              "Director": "£90"
+            }
+          },
+          {
+            "name": "Colour Melt",
+            "prices": {
+              "Stylist": "£45",
+              "Premier Stylist": "£50",
+              "Director": "£55"
+            }
+          },
+          {
+            "name": "Bleach Root & Toner",
+            "prices": {
+              "Stylist": "£65",
+              "Premier Stylist": "£70",
+              "Director": "£75"
+            }
+          },
+          {
+            "name": "Long Thick Hair Supplement",
+            "prices": {
+              "Stylist": "£15",
+              "Premier Stylist": "£15",
+              "Director": "£15"
+            }
+          },
+          {
+            "name": "Bridal Services",
+            "prices": {
+              "Bridal Hair Design - In Salon": "£45-£90",
+              "Bridal Hair Design - Out Of Salon": "£60-£110"
+            }
+          }
+        ]
+      },
+      {
+        "category": "Colouring",
+        "services": [
+          {
+            "name": "Full Head Tint",
+            "prices": {
+              "Stylist": "£53",
+              "Premier Stylist": "£55",
+              "Director": "£58"
+            }
+          },
+          {
+            "name": "Tint Regrowth",
+            "prices": {
+              "Stylist": "£40",
+              "Premier Stylist": "£43",
+              "Director": "£46"
+            }
+          },
+          {
+            "name": "Full Head Semi",
+            "prices": {
+              "Stylist": "£53",
+              "Premier Stylist": "£55",
+              "Director": "£58"
+            }
+          }
+        ]
+      },
+      {
+        "category": "Highlights",
+        "services": [
+          {
+            "name": "Full Head Highlights",
+            "prices": {
+              "Stylist": "£70",
+              "Premier Stylist": "£75",
+              "Director": "£80"
+            }
+          },
+          {
+            "name": "Half Head Highlights",
+            "prices": {
+              "Stylist": "£60",
+              "Premier Stylist": "£65",
+              "Director": "£70"
+            }
+          },
+          {
+            "name": "T-Section Highlights",
+            "prices": {
+              "Stylist": "£50",
+              "Premier Stylist": "£55",
+              "Director": "£60"
+            }
+          }
+        ]
+      },
+      {
+        "category": "Salon Additions",
+        "services": [
+          {
+            "name": "Treatments",
+            "prices": {
+              "Hydrating": "£7",
+              "Penetrating": "£7",
+              "Gloss Service": "£12",
+              "OLAPLEX": "£12",
+              "OLAPLEX +20+": "£20+"
+            }
+          }          
+        ]
+      }
+    ]
+  }
+  

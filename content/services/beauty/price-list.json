@@ -1,0 +1,142 @@
+{
+    "services": [
+      {
+        "category": "Nails",
+        "subcategory": "MANICURES",
+        "services": [
+          {
+            "name": "TGB Express Manicure",
+            "price": "£30",
+            "description": "Our express manicure includes nail prep and colour of your choice."
+          },
+          {
+            "name": "TGB Manicure + BIAB",
+            "price": "£35",
+            "description": "This manicure includes BIAB (builder in a bottle). Ideal for strengthening nails into shapes and maintaining length."
+          },
+          {
+            "name": "TGB Mani + Nail Art",
+            "price": "£33",
+            "description": "The Gel Bottle manicure includes nail prep and bespoke nail art."
+          },
+          {
+            "name": "TGB Mani + BIAB + Nail Art",
+            "price": "£40",
+            "description": "Includes BIAB (builder in a bottle). Ideal for strengthening nails into shapes and maintaining length. Finished with bespoke nail art."
+          },
+          {
+            "name": "TBG Soak Off",
+            "price": "£13",
+            "description": "Our soak off removes Gel/BIAB and prepares nail for next treatment."
+          }
+        ]
+      },
+      {
+        "subcategory": "PEDICURES",
+        "services": [
+          {
+            "name": "TGB Express Toes",
+            "price": "£30",
+            "description": "Our express pedicure includes nail prep and a colour of your choice."
+          },
+          {
+            "name": "TGB Toes + Nail Art",
+            "price": "£36",
+            "description": "Includes nail prep and bespoke nail art."
+          },
+          {
+            "name": "TGB Toes Soak Off",
+            "price": "£13",
+            "description": "Our soak off removes Gel/BIAB and prepares nail for next treatment."
+          },
+          {
+            "name": "ELIM Express Pedicure + GEL",
+            "price": "£40",
+            "description": "Our ELIM express pedicure includes gel polish with nail today, skin peel and foot massage."
+          },
+          {
+            "name": "ELIM Deluxe Pedi",
+            "price": "£40",
+            "description": "Our ELIM deluxe treatment removes hard skin and calluses. Includes a nail tidy, skin peel, foot mask, foot soak and massage."
+          },
+          {
+            "name": "ELIM Deluxe Pedi + GEL",
+            "price": "£50",
+            "description": "Our ELIM deluxe treatment removes hard skin and calluses. Includes a nail tidy, skin peel, foot mask, foot soak and massage. Finished with a gel polish."
+          }
+        ]
+      },
+      {
+        "category": "Brows",
+        "subcategory": "HD BROWS",
+        "services": [
+          {
+            "name": "HD Brows",
+            "price": "£28",
+            "description": "Our HD treatment is a bespoke brow service that includes a 5 step process: Tinting, trimming, threading, tweezing and shaping."
+          },
+          {
+            "name": "HD Sculpt",
+            "price": "£40",
+            "description": "Our sculpt treatment is brow lamination with a twist. Sculpt helps create fluffy, fuller brows with symmetry. This treatment includes the traditional 5 step process."
+          }
+        ]
+      },
+      {
+        "subcategory": "EXPRESS BROWS",
+        "services": [
+          {
+            "name": "Brow Shape",
+            "price": "£10",
+            "description": "An express service using tweezers to shape and tidy brows."
+          },
+          {
+            "name": "Brow Wax",
+            "price": "£10",
+            "description": "Express wax treatment to re-shape and tidy brows."
+          },
+          {
+            "name": "Brow Tint",
+            "price": "£10",
+            "description": "Express tint service to darken the natural brows and create a fuller look."
+          },
+          {
+            "name": "Brow Tint & Wax",
+            "price": "£20",
+            "description": "Express wax and tint to tidy, re-shape and define brow look."
+          }
+        ]
+      },
+      {
+        "subcategory": "HYBRID BROWS",
+        "services": [
+          {
+            "name": "Hybrid Brows",
+            "price": "£30",
+            "description": "A combination of traditional brow treatments with high-pigmented dye that stains the skin and hair for longer-lasting results. Ammonia-free formula."
+          }
+        ]
+      },
+      {
+        "category": "LASHES",
+        "services": [
+          {
+            "name": "LVL LASHES",
+            "price": "£25",
+            "description": "Lash Lift: Lifts and curls your natural lashes to give the appearance of longer lashes."
+          },
+          {
+            "name": "Express Lash Tint",
+            "price": "£14",
+            "description": "Express lash tint to darken your lashes to make them appear longer and fuller."
+          },
+          {
+            "name": "Lash Lift & Tint",
+            "price": "£40",
+            "description": "Lifts, curls and tints your natural lashes to give the appearance of longer fuller lashes."
+          }
+        ]
+      }
+    ]
+  }
+  

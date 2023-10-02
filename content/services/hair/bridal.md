@@ -1,5 +1,7 @@
 ---
 title: 'Bridal'
+themePrimary: "#BF9663"
+themeSecondary: "#A67232"
 description: 'This is my description!'
-img: 'https://picsum.photos/id/237/200/300'
+img: '/dummy-journal_01.jpg'
 ---
