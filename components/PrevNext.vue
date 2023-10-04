@@ -6,26 +6,38 @@ defineProps(["prev", "next"]);
 </script>
 
 <template>
-  <ul class="prev-next-cont">
+  <ul class="prev-next-cont flex flex-row justify-between items-center">
     <li class="link-item prev">
-      <NuxtLink v-if="prev" :to="prev._path">
-        <span> {{ prev.title }} </span>
+      <NuxtLink v-if="prev" :to="prev._path" aria-label="Prev">
+        <span class="font-header text-h2"> Prev </span>
       </NuxtLink>
     </li>
-    <li class="link-item next">
-      <NuxtLink v-if="next" :to="next._path">
-        <span> {{ next.title }} </span>
+    <li class="link-item next self-end">
+      <NuxtLink v-if="next" :to="next._path" arai-label="Next">
+        <span class="font-header text-h2"> Next</span>
       </NuxtLink>
     </li>
   </ul>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .prev-next-cont {
-  @apply flex gap-4 justify-between p-4 border border-slate-200 rounded-lg;
-}
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  mix-blend-mode: soft-light;
 
-.link-item a {
-  @apply flex gap-2;
+  a {
+    transform: rotate(-90deg);
+    display: block;
+    transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);  
+    &:hover,
+    &:focus {      
+      color: var(--color-primary);
+      transform: scale(0.9) rotate(0deg);
+    }
+  }
 }
 </style>

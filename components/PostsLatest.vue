@@ -31,7 +31,7 @@
       <!-- Default list slot -->
       <template v-slot="{ list }">
         <div
-          class="article-list | grid grid-cols-1 gap-x-4 gap-y-8 justify-center items-start h-full max-w-screen-xl w-full px-4 mx-auto mb-32 | sm:grid-cols-2 sm:gap-8 | md:grid-cols-3"
+          class="article-list | grid grid-cols-1 gap-x-4 gap-y-8 justify-center items-start h-full max-w-screen-3xl w-full px-4 mx-auto mb-32 | sm:grid-cols-2 sm:gap-8 | md:grid-cols-3"
         >
           <article
             v-for="(article, index) in list"

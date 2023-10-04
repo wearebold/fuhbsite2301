@@ -1,49 +1,74 @@
 <template>
-  <div>
-    <h1>Journal</h1>
-
+  <section
+    class="text-neutral-100 antialiased | py-16 sm:py-20 md:py-24 lg:py-28"
+    style="background-color: var(--primary-secondary)"
+  >
+    <h2
+      class="text-xs uppercase tracking-widest font-body | flex flex-col items-center mb-6"
+    >
+      <span class="text-caps tracking-widest uppercase semibold">Journal</span>
+      <span class="block w-px h-8 bg-neutral-100 mx-auto mt-4"></span>
+    </h2>
     <ContentList
       path="/journal"
       :query="{
-        only: ['title', 'description', 'tags', '_path', 'img'],
-        // where: {
-        //   tags: {
-        //     $contains: filter,
-        //   },
-        // },
+        only: [
+          'title',
+          'description',
+          'tags',
+          '_path',
+          'img',
+          'date',
+          'dateFormated',
+        ],
+        $sort: {
+          date: 'desc', // Replace 'date' with your actual date field name
+        },
+        // $limit: 3, // Limit the results to the latest 3 articles
         $sensitivity: 'base',
       }"
     >
       <!-- Default list slot -->
       <template v-slot="{ list }">
-        <ul class="article-list">
-          <li v-for="article in list" :key="article._path" class="article-item">
-            <NuxtLink :to="article._path">
-              <div class="wrapper">
-                <div class="img-cont w-32 shrink-0">
-                  <img
-                    :src="`${article.img}`"
-                    :alt="article.title"
-                    class="rounded-lg max-h-[8rem]"
-                  />
-                </div>
-                <header>
-                  <h1 class="text-2xl font-semibold">{{ article.title }}</h1>
-                  <p>{{ article.description }}</p>
-                  <!-- <ul class="article-tags">
-                    <li
-                      class="tag !py-0.5"
-                      v-for="(tag, n) in article.tags"
-                      :key="n"
+        <div
+          class="article-list | grid grid-cols-1 gap-x-4 gap-y-8 justify-center items-start h-full max-w-screen-3xl w-full px-4 mx-auto mb-32 | sm:grid-cols-2 sm:gap-8 | md:grid-cols-3"
+        >
+          <article
+            v-for="(article, index) in list"
+            :key="article._path"
+            class="article-list__item | relative"
+            :class="{
+              'sm:hidden': index === list.length - 1,
+              'md:block': index === list.length - 1,
+            }"
+          >
+            <div class="flex flex-col-reverse gap-4">
+                <NuxtLink
+                    class="article-list__link | a11y-link | flex flex-col justify-center items-center text-center z-10"
+                    :to="article._path"
+                >
+                    <time
+                    class="text-caps uppercase tracking-widest"
+                    :datetime="article.date"
                     >
-                      {{ tag }}
-                    </li>
-                  </ul> -->
-                </header>
-              </div>
-            </NuxtLink>
-          </li>
-        </ul>
+                    {{ article.dateFormated }}</time
+                    >
+                    <span
+                    class="block w-px h-2 bg-neutral-100 mx-auto mt-4"
+                    ></span>
+                    <h3 class="text-h2 leading-tight">
+                    {{ article.title }}
+                    </h3>
+                </NuxtLink>
+
+              <img
+                :src="`${article.img}`"
+                :alt="article.title"
+                class="aritcle-list__img | h-full w-full object-cover shrink-0"
+              />
+            </div>
+          </article>
+        </div>
       </template>
 
       <!-- Not found slot to display message when no content us is found -->
@@ -51,7 +76,7 @@
         <p>No articles found.</p>
       </template>
     </ContentList>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -65,14 +90,35 @@ const {
 } = useRoute();
 
 const filter = ref(tags?.split(","));
-
-// set meta for page
-useHead({
-  title: "Journal",
-  meta: [
-    { name: "description", content: "Here's a list of all my great articles" },
-  ],
-});
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.article-list .article-list__item:nth-child(2) {
+    .aritcle-list__img {
+        // mix-blend-mode: normal;
+
+        @media (min-width: 768px) {
+            margin-top: 33%;
+        }
+    }    
+}
+.aritcle-list__img {
+      clip-path: inset(0% 0% -100% 0% round 100vw);
+    // clip-path: inset(0% 0% 0% 0% round 100vw);
+  transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transform-origin: center;
+  transform: scale(0.9);
+  mix-blend-mode: luminosity;
+}
+
+.article-list__link {
+  &:hover,
+  &:focus {
+    + .aritcle-list__img {
+    //   will-change: clip-path;          
+      transform: scale(1.125);
+      mix-blend-mode: normal;
+    }
+  }
+}
+</style>
