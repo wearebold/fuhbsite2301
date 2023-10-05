@@ -64,7 +64,7 @@
               </p>
             </div>
 
-            <img src="dummy-salon.jpg" alt="dummy-journal" />
+            <img :src="dummy-salon.jpg" alt="dummy-journal" />
           </div>
         </div>
       </div>
