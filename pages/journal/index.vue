@@ -90,6 +90,16 @@ const {
 } = useRoute();
 
 const filter = ref(tags?.split(","));
+
+onMounted(() => {
+  const primaryBg = "#d999bf";
+  const primarySecondary = "#7b064d";
+
+  // Update CSS custom properties
+  document.documentElement.style.setProperty("--primary-bg", primaryBg);
+  document.documentElement.style.setProperty("--primary-secondary", primarySecondary);
+  document.documentElement.style.setProperty("--cursor-fill", primarySecondary);
+});
 </script>
 
 <style lang="scss" scoped>

@@ -1,7 +1,7 @@
 <template> 
   <div class="relative" style="background-color: var(--primary-bg);">
       <section
-      class="site-nav | anim-img-hover | relative z-10 | text-neutral-100 antialiased | pt-16 pb-32 | sm:pt-20 sm:pb-40 | md:pt-24  md:pb-44"           
+      class="site-nav | anim-img-hover | relative z-10 | text-neutral-100 antialiased | pt-16 pb-32 | sm:pt-20 sm:pb-40 | md:pt-24  md:pb-64"           
       >      
 
         <h2 class="text-xs uppercase tracking-widest font-body | flex flex-col items-center">

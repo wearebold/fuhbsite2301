@@ -1,6 +1,6 @@
 <template>
   <div>
-    <article class="c-article">
+    <article class="c-article" style="margin-top: clamp(4.5rem, 4.371rem + 0.86vw, 5.75rem);">
       <header
         class="py-24 text-center"
         style="background-color: var(--primary-bg); color: white"
@@ -70,6 +70,16 @@ useHead({
       content: `https://site.com/${data.value.article.img}`,
     },
   ],
+});
+
+onMounted(() => {
+  const primaryBg = "#d999bf";
+  const primarySecondary = "#7b064d";
+
+  // Update CSS custom properties
+  document.documentElement.style.setProperty("--primary-bg", primaryBg);
+  document.documentElement.style.setProperty("--primary-secondary", primarySecondary);
+  document.documentElement.style.setProperty("--cursor-fill", primarySecondary);
 });
 </script>
 

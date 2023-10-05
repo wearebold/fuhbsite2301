@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="p-about" style="margin-top: clamp(4.5rem, 4.371rem + 0.86vw, 5.75rem);">
     <article>
       <div
         class="py-24 text-center"
@@ -201,6 +201,20 @@ export default {
       ],
     };
   },
+  setup() {
+    // Use the onMounted hook to execute code when the component is mounted
+    onMounted(() => {
+      const primaryBg = "#0F766E";
+      const primarySecondary = "#134E4A";
+
+      // Update CSS custom properties
+      document.documentElement.style.setProperty("--primary-bg", primaryBg);
+      document.documentElement.style.setProperty("--primary-secondary", primarySecondary);
+      document.documentElement.style.setProperty("--cursor-fill", primarySecondary);
+    });
+
+    // Your component logic
+  }
 };
 </script>
 

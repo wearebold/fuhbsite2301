@@ -7,6 +7,7 @@ useHead({
     { name: 'description', content: '' }
   ],
 })
+
 </script>
 <template>
   <div>

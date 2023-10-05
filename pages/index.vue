@@ -29,6 +29,21 @@ export default {
     return {
         heroURL: '/dummy-hero.jpg', // Initial image path
     };
+  },
+  setup() {
+    // Use the onMounted hook to execute code when the component is mounted
+    onMounted(() => {
+        const primaryBg = "#d999bf";
+        const primarySecondary = "#7b064d";
+        const primaryTertiary = "#ce1985";
+
+      // Update CSS custom properties
+      document.documentElement.style.setProperty("--primary-bg", primaryBg);
+      document.documentElement.style.setProperty("--primary-secondary", primarySecondary);
+      document.documentElement.style.setProperty("--cursor-fill", primaryTertiary);
+    });
+
+    // Your component logic
   }
 };
 </script>

@@ -24,6 +24,7 @@ body {
     @apply font-body text-neutral-950;
 }
 
+
 // .bg-noise {
 //   pointer-events: none;
 //   position: fixed;
@@ -107,6 +108,10 @@ h6 {
   font-weight: 400;
   text-wrap: balance;
   @apply font-header;
+}
+
+.font-header {
+  letter-spacing: 0.06rem;
 }
 
 .font-display {
